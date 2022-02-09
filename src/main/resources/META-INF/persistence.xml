@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="SMS">
+     <!--   <provider>org.hibernate.ejb.HibernatePersistence</provider>-->
+
+        <class>jpa.entitymodels.Student</class>
+        <class>jpa.entitymodels.Course</class>
+        <properties>
+            <!-- Configuring The Database Connection Details -->
+          <!--  <property name="hibernate.dialect" value="org.hibernate.dialect.MariaDB102Dialect"/>-->
+            <property name="javax.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mariadb://localhost/schoolmanagement" />
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <property name="javax.persistence.jdbc.password" value="Ahlam" />
+            <!--   <property name="eclipselink.logging.level" value="OFF"/> -->
+            <property name="javax.persistence.schema-generation.database.action" value="update"/>
+        </properties>
+    </persistence-unit>
+</persistence>
